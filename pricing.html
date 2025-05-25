@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <title>Our Pricing | AryaDevs</title>
+    <meta name="description" content="Explore some of our top projects." />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link rel="stylesheet" href="css/team.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/pricing.css" />
+    <script src="js/pkgs/barba.umd.js"></script>
+    <script src="js/pkgs/lodash.min.js"></script>
+    <script src="js/pkgs/revealer.iife.js"></script>
+    <script src="js/pkgs/gsap.min.js"></script>
+    <script src="js/pkgs/TweenMax.min.js"></script>
+    <script src="js/pkgs/anime.min.js"></script>
+    <script src="js/pkgs/tailwindcss.min.js"></script>
+
+</head>
+
+<body data-barba="wrapper">
+    <div class="navbar">
+        <a href="/index.html" class="logo__btn">AryaDevs</a>
+        <div class="menu__itms">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="services.html">services</a>
+            <a href="projects.html">projects</a>
+            <a href="pricing.html">pricing</a>
+            <a href="contact.html">contact</a>
+        </div>
+        <button class="menu__btn">menu</button>
+    </div>
+
+    <div id="loader-container"></div>
+    <div id="menu-container"></div>
+    <script>
+        function loadComponent(htmlFile, containerId, scriptFile) {
+            fetch(htmlFile)
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById(containerId).innerHTML = data;
+                    const script = document.createElement("script");
+                    script.src = scriptFile;
+                    document.body.appendChild(script);
+                })
+                .catch((error) => console.error(`Error loading ${htmlFile}:`, error));
+        }
+        loadComponent("loader.html", "loader-container", "js/loader.js");
+        loadComponent("menu.html", "menu-container", "js/menu.js");
+    </script>
+
+    <main data-barba="container" data-barba-namespace="services">
+        <div class="qualities">
+            <div class="head">
+                <h2>Pricing</h2>
+                <div>
+                    <p class="subtitle">Designed to grow your business, no matter where you're starting</p>
+
+                    <div class="grid">
+
+                        <!-- Essential -->
+                        <div class="card">
+                            <div class="ribbon">Starter</div>
+                            <div class="pricing-title">💡 Essential Web Presence</div>
+                            <p class="price">$500 – $700</p>
+                            <ul>
+                                <li>✅1-page scrolling website</li>
+                                <li>✅Clean UI/UX design</li>
+                                <li>✅Mobile responsive</li>
+                                <li>✅Basic SEO setup</li>
+                                <li>✅Simple contact form</li>
+                                <li>✅Logo design (basic) - Optional</li>
+                                <li>✅Free domain & hosting (1 yr)</li>
+                                <li>✅Unlimited revisions</li>
+                            </ul>
+                            <p class="tagline">🟢 Clean and fast online presence</p>
+                            <p class="delivery">Delivery: 5–7 Days</p>
+                            <a href="contact.html" class="cta-button">Get Started</a>
+                        </div>
+
+                        <!-- Business Growth -->
+                        <div class="card">
+                            <div class="ribbon" style="background:#d1fae5; color:#047857;">Most Popular</div>
+                            <div class="pricing-title">⚙️ Business Growth Website</div>
+                            <p class="price">$900 – $1,300</p>
+                            <ul>
+                                <li>✅Up to 5 custom pages</li>
+                                <li>✅Professional UI/UX layout</li>
+                                <li class="highlight">✅Mobile & SEO optimized (core pages)</li>
+                                <li class="highlight">✅Google Maps & Reviews embed</li>
+                                <li>✅Lead capture forms</li>
+                                <li class="highlight">✅Appointment booking integration (Calendly, Square, etc.)</li>
+                                <li class="highlight">✅Smart Review System</li>
+                                <li class="highlight">✅Custom logo & branding kit (colors, fonts, brand style) - Optional</li>
+                                <li>✅FAQ Section for SEO + trust</li>
+                                <li>✅Free domain & hosting (1 yr)</li>
+                                <li>✅Unlimited revisions</li>
+                            </ul>
+                            <p class="tagline">🟠 More visibility, more leads</p>
+                            <p class="delivery">Delivery: 7–12 Days</p>
+                            <a href="contact.html" class="cta-button">Get Started</a>
+                        </div>
+
+                        <!-- Premium -->
+                        <div class="card">
+                            <div class="ribbon" style="background:#fee2e2; color:#b91c1c;">Best Value</div>
+                            <div class="pricing-title">🚀 Premium Conversion & Branding</div>
+                            <p class="price">$1,500 – $2,000</p>
+                            <ul>
+                                <li>✅Up to 10 custom pages</li>
+                                <li>✅Advanced UI/UX layout for conversion</li>
+                                <li class="highlight">✅Full on-page SEO optimization</li>
+                                <li class="highlight">✅Copywriting support</li>
+                                <li>✅Speed & performance optimization</li>
+                                <li class="highlight">✅Appointment booking integration (Calendly, Square, etc.)</li>
+                                <li class="highlight">✅Custom logo & branding kit (colors, fonts, brand style) - Optional</li>
+                                <li>✅ <span class="highlight">Google Analytics</span>, Google Maps, and review embed</li>
+                                <li class="highlight">✅Smart Review System</li>
+                                <li>✅FAQ Section for SEO & customer clarity</li>
+                                <li>✅Unlimited revisions</li>
+                                <li>✅Free hosting & domain for 1 year</li>
+                                <li class="highlight">✅1 month of post-launch support</li>
+                            </ul>
+                            <p class="tagline">🔴 Built to convert & dominate locally</p>
+                            <p class="delivery">Delivery: 12–18 Days</p>
+                            <a href="contact.html" class="cta-button">Get Started</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/page.js"></script>
+</body>
+
+</html>
